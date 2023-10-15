@@ -12,6 +12,8 @@ func ler_argumentos() ([]string) {
 	return args
 }	
 
+
+
 func main() {
 	var argumentos = ler_argumentos()
 	var unidadeDestino string
@@ -35,9 +37,9 @@ func main() {
 		os.Exit(1)
 	}
 
-
 	for index, value := range valoresOrigem {
 		valorOrigem, err := strconv.ParseFloat(value, 64)
+		
 		if err != nil {
 			fmt.Printf(
 				"O valor %s na posição %d não é um numero valido", value, index)
